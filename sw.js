@@ -15,7 +15,9 @@ workbox.precaching.precacheAndRoute([
   {url: '/pages/klasemen.html', revision: '1'},
   {url: '/pages/saved.html', revision: '1'},
   {url: '/manifest.json', revision: '1'}
-]);
+], {
+  ignoreUrlParametersMatching: [/.*/]
+});
 
 workbox.routing.registerRoute(
   /\.(?:png|gif|jpg|jpeg|svg|css|js)$/,
